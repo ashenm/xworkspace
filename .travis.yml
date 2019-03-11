@@ -1,0 +1,15 @@
+language:
+  minimal
+
+services:
+  docker
+
+install:
+  make clean
+
+script:
+  make build
+
+deploy:
+  provider: script
+  script: make deploy

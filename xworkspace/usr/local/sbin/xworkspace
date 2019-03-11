@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+set -e
+
+# vnc user
+export USER=`whoami`
+
+# ensure config dir
+mkdir -p $HOME/.vnc
+
+# clear existing logs
+rm -f $HOME/.vnc/*:1.log
+
+# ensure passwd file to
+# avoid interactive prompts
+test -f $HOME/.vnc/passwd || \
+  cp -f /etc/vnc/passwd.default $HOME/.vnc/passwd
+
+# kill any existing process
+test -f $HOME/.vnc/*:1.pid && \
+  vncserver -kill :1
+
+# spawn Xvnc server with any
+# additional arguments provided
+# i.e. `-geometry 1366x768`
+vncserver :1 -name xworkspace -depth 24 -rfbport 5050 -SecurityTypes None $@
+
+# follow log
+tail -F $HOME/.vnc/*:1.log
