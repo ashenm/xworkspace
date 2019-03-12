@@ -10,4 +10,4 @@ find xworkspace/usr/local/sbin -type f -exec chmod 755 {} \;
 find xworkspace/etc/vnc/xstartup* -type f -exec chmod 755 {} \;
 
 # build :latest
-docker build --tag "${TRAVIS_REPO_SLUG:-ashenm/xworkspace:dev}" .
+docker build --tag "${TRAVIS_REPO_SLUG:-ashenm/xworkspace}:${TRAVIS_BRANCH:-latest-alpha}" .

@@ -5,7 +5,7 @@ services:
   docker
 
 install:
-  make clean
+  make install
 
 script:
   make build
@@ -13,3 +13,6 @@ script:
 deploy:
   provider: script
   script: make deploy
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH != *-alpha

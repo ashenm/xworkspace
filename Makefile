@@ -1,11 +1,14 @@
 build:
 	./scripts/build.sh
 
-run:
-	./scripts/run.sh --dry --dev
+clean:
+	./scripts/clean.sh
 
 deploy:
 	./scripts/deploy.sh
 
-clean:
-	./scripts/clean.sh
+install:
+	./scripts/install.sh
+
+run:
+	./scripts/run.sh --alpha --dry
