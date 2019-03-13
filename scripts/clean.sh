@@ -8,6 +8,6 @@ test "$1" = "-a" \
     && TRAVIS_BRANCH="*"
 
 # remove selected images
-docker images "${TRAVIS_REPO_SLUG:-ashenm/xworkspace}:${TRAVIS_BRANCH:-latest-alpha}" \
+docker images --all --filter reference="${TRAVIS_REPO_SLUG:-ashenm/xworkspace}:${TRAVIS_BRANCH:-latest-alpha}" \
   | awk 'NR>1 { print $3 }' \
   | xargs -r docker rmi
