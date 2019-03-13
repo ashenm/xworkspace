@@ -1,5 +1,5 @@
 # XWorkspace #
-[![Build Status](https://travis-ci.org/ashenm/xworkspace.svg?branch=latest)](https://travis-ci.org/ashenm/xworkspace) [![Image Overview](https://images.microbadger.com/badges/image/ashenm/xworkspace.svg)](https://hub.docker.com/r/ashenm/xworkspace/)
+[![Build Status](https://travis-ci.org/ashenm/xworkspace.svg?branch=latest)](https://travis-ci.org/ashenm/xworkspace) [![Image Tag](https://img.shields.io/badge/tag-latest-blue.svg)](https://github.com/ashenm/xworkspace/tree/latest) [![Image Overview](https://images.microbadger.com/badges/image/ashenm/xworkspace.svg)](https://hub.docker.com/r/ashenm/xworkspace/)
 
 ![screenshot](docs/img/screenshot.png)
 
