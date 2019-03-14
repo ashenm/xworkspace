@@ -25,7 +25,7 @@ RUN sudo apt-get update && \
 # configure atom.io repository
 # https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux
 RUN curl -sSL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add - && \
-  echo 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main' |
+  echo 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main' | \
     sudo tee /etc/apt/sources.list.d/atom.list
 
 # install supplementaries
